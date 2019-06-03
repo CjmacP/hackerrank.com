@@ -1,0 +1,7 @@
+# https://www.hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem
+# Difficulty: Easy
+
+number_of_scores = input()
+score = set(map(int,input().split()))
+
+print(sorted(score)[-2])
