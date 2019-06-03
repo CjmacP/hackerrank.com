@@ -1,0 +1,21 @@
+# https://www.hackerrank.com/challenges/py-if-else/problem
+# Score 10
+
+while True:
+    N = int(input())
+
+    if N not in range(1, 101):
+        print('Pick another number between 1-100')
+        continue
+    elif N % 2 == 0 and N in range(2 , 6):
+        print('Not Weird')
+        break
+    elif N % 2 != 0:
+        print('Weird')
+        break
+    elif N % 2 == 0 and N in range(6, 21):
+        print('Weird')
+        break
+    else:
+        print('Not Weird')
+        break
