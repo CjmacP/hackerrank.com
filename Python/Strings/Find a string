@@ -1,0 +1,19 @@
+# https://www.hackerrank.com/challenges/find-a-string/problem
+# Difficulty: Easy
+ 
+a = input()                 # input first line      ex: abcdcdc
+b = input()                 # input target snippet  ex: cdc
+c = len(b)                  # length of target      ex: 3
+d = 0                       # count starting at 0
+for i in range(len(a)):     # for loop going to range of total length of a
+    if a[i:i + c] == b:     # if loop if the snippet a[i:i + c] same as a[0: 3] is == to b or cdc
+        d += 1              # add 1 to d if true
+print(d)
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+    
+    count = count_substring(string, sub_string)
+    print(count)
+    
+    
