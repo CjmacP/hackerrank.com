@@ -2,7 +2,7 @@
 # Difficulty: Easy
 
 '''
----- None list comprehension atempt ----
+---- None list comprehension----
 
 x, y, z, n = [int(input()), int(input()), int(input()), int(input())]
 empty_list = []
@@ -13,7 +13,7 @@ for a in range(0,x+1):
                     empty_list.append([a, b, c])
 
 print(empty_list)
-----------------------------------------
+---------------------------------
 '''
 
 '''
