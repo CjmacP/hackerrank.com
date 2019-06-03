@@ -1,0 +1,55 @@
+# https://www.hackerrank.com/challenges/string-validators/problem
+# Difficulty: Easy
+
+str = input()
+
+a = 0
+for x in str:
+    if x.isalnum():
+        print(True)
+        break
+    else:
+        a += 1
+if a == len(str):
+    print(False)
+
+b = 0
+for c in str:
+    if c.isalpha():
+        print(True)
+        break
+    else:
+        b += 1
+if b == len(str):
+    print(False)
+
+c = 0
+for x in str:
+    if x.isdigit():
+        print(True)
+        break
+    else:
+        c += 1
+if c == len(str):
+    print(False)
+
+d = 0
+for x in str:
+    if x.islower():
+        print(True)
+        break
+    else:
+        d += 1
+if d == len(str):
+    print(False)
+
+e = 0
+for x in str:
+    if x.isupper():
+        print(True)
+        break
+    else:
+        e += 1
+if e == len(str):
+    print(False)
+
