@@ -1,0 +1,21 @@
+# https://www.hackerrank.com/challenges/python-arithmetic-operators/problem
+# Score 10
+
+while True:
+    #print('Enter in your first number:')
+    a = int(input())
+    if a not in range(1, (10 ** 10)):
+        print('Enter in a lower number:')
+        continue
+
+    #print('Enter in your second number:')
+    b = int(input())
+    if b not in range(1, (10 ** 10)):
+        print('Enter in a lower number:')
+        continue
+    break
+
+print(a + b)
+print(a - b)
+print(a * b)
+
