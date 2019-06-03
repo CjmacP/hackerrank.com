@@ -1,5 +1,5 @@
 # https://www.hackerrank.com/challenges/py-if-else/problem
-# Score 10
+# Difficulty: Easy
 
 while True:
     N = int(input())
