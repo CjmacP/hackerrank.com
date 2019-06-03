@@ -1,5 +1,5 @@
 # https://www.hackerrank.com/challenges/python-arithmetic-operators/problem
-# Score 10
+# Difficulty: Easy
 
 while True:
     #print('Enter in your first number:')
