@@ -1,5 +1,5 @@
 # https://www.hackerrank.com/challenges/python-division/problem
-# Score 10
+# Difficulty: Easy
 
 a = int(input())
 b = int(input())
