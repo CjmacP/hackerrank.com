@@ -1,7 +1,0 @@
-input()
-first = set(map(int, input().split()))
-input()
-second = set(map(int, input().split()))
-
-final = first | second
-print(len(final))
