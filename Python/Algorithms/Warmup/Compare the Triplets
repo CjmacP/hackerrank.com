@@ -1,0 +1,25 @@
+# https://www.hackerrank.com/challenges/compare-the-triplets/problem
+# Difficulty: Easy
+
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+g = len(a)
+atotal = 0
+btotal = 0
+len = 0
+pos = 0
+while len != g:
+    if a[pos] > b[pos]:
+        pos += 1
+        atotal += 1
+        len += 1
+    elif a[pos] < b[pos]:
+        btotal += 1
+        pos += 1
+        len += 1
+    else:
+        pos += 1
+        len += 1
+
+print(atotal, btotal)
+
