@@ -1,0 +1,25 @@
+# https://www.hackerrank.com/challenges/text-wrap/problem
+# Difficulty: Easy
+
+import textwrap
+
+
+s = list(map(str, input()))
+w = input()
+q = len(s)
+t = int(w)
+p = 0
+g =0
+while p <= q:
+    r = s[g: t]
+    x = ''.join(r)
+    print(x.replace(' ', ''))
+    p += int(w)
+    g += int(w)
+    t += int(w)
+
+if __name__ == '__main__':
+    string, max_width = input(), int(input())
+    result = wrap(string, max_width)
+    print(result)
+
