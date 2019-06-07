@@ -1,0 +1,15 @@
+# https://www.hackerrank.com/challenges/defaultdict-tutorial/problem
+# Difficulty: Easy
+
+a, b = list(map(int, input().split()))
+x = [input() for i in range(a)]
+y = [input() for i in range(b)]
+l = 0
+for i in range(b):
+    k = [i+1 for i,j in enumerate(x) if j == y[l]]
+    l += 1
+    if k != []:
+        print(*k)
+    else:
+        print(-1)
+
