@@ -1,0 +1,9 @@
+# https://www.hackerrank.com/challenges/simple-array-sum/problem
+# Difficulty: Easy
+
+n = int(input())
+
+ar = list(map(int, input().split()))
+
+print(sum(ar))
+
