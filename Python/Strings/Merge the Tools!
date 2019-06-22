@@ -1,0 +1,20 @@
+# https://www.hackerrank.com/challenges/merge-the-tools/problem
+# Difficulty: Medium
+
+def merge_the_tools(string, k):
+    lst = [string[i-k:i] for i in range(k,len(string)+k,k)]
+    
+    emp = []
+    for i in range(len(lst)):
+        f = []
+        [f.append(p) for p in lst[i] if p not in f]
+        emp.append(f)
+    for i in range(len(emp)):
+        print(''.join(emp[i]))
+
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
+
+
