@@ -1,0 +1,9 @@
+# https://www.hackerrank.com/challenges/a-very-big-sum/problem
+# Difficulty: Easy
+
+ar_count = int(input())
+
+ar = list(map(int, input().rstrip().split()))
+
+print(sum(ar))
+
