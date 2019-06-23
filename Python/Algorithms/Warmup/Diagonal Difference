@@ -1,0 +1,19 @@
+# https://www.hackerrank.com/challenges/diagonal-difference/problem
+# Difficulty: Easy
+
+def diagonalDifference(arr):
+    frst = [j[i] for i,j in enumerate(arr)]
+    scnd = [j[abs(i - (len(j)-1))] for i,j in enumerate(arr)]
+    print(abs(sum(frst)-sum(scnd)))
+
+if __name__ == '__main__':
+ 
+    n = int(input().strip())
+
+    arr = []
+
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    result = diagonalDifference(arr)
+
