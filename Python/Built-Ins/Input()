@@ -1,0 +1,13 @@
+# https://www.hackerrank.com/challenges/input/problem
+# Difficulty: Easy
+
+p = list(map(int, input().split()))
+j = str(input())
+x = p[0]
+k = p[1]
+# print(x)
+# print(k)
+
+r = eval(j) == k
+print(r)
+
