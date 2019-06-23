@@ -1,0 +1,21 @@
+# https://www.hackerrank.com/challenges/capitalize/problem
+# Difficulty: Easy
+
+def solve(s):
+    
+    p = list(s.split(' '))
+    q = [i.capitalize() for i in p]
+
+    return ' '.join(q)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
+
