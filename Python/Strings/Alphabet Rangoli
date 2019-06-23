@@ -1,0 +1,15 @@
+# https://www.hackerrank.com/challenges/alphabet-rangoli/problem
+# Difficulty: 
+
+def print_rangoli(p):
+    
+    alp = 'abcdefghijklmnopqrstuvwxyz'
+
+    for i in range(p - 1, -p, -1):
+        temp = '-'.join(alp[p - 1:abs(i):-1] + alp[abs(i):p])
+        print(temp.center(4 * p - 3, '-'))
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
+
