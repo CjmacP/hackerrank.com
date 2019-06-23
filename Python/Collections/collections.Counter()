@@ -1,0 +1,37 @@
+# https://www.hackerrank.com/challenges/collections-counter/problem
+# Difficulty: Easy
+
+from collections import Counter
+
+input()
+b = list(input().split())
+
+z = Counter(b).items()
+
+dic = dict(z)
+
+c = int(input())
+
+x = []
+e = []
+price = []
+y = 0
+for i in range(c):
+
+    q = input().split()
+    e.append(q[0])
+    
+    j = Counter(e).items()
+    g = dict(j)
+
+    try:
+        if g[str(e[y])] <= dic[str(e[y])]:
+            x.append(q[1])
+            y += 1
+        else:
+            y += 1
+    except:
+        y += 1
+        pass
+print(sum(int(i) for i in x))
+
