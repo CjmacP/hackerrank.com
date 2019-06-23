@@ -1,0 +1,12 @@
+# https://www.hackerrank.com/challenges/py-set-symmetric-difference-operation/problem
+# Difficulty: Easy
+
+input()
+first = set(map(int, input().split()))
+input()
+second = set(map(int, input().split()))
+
+final = first.symmetric_difference(second)
+print(len(final))
+
+
