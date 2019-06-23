@@ -1,0 +1,10 @@
+# https://www.hackerrank.com/challenges/py-set-add/problem
+# Difficulty: Easy
+
+butt = int(input())
+t = []
+for i in range(butt):
+    t.append(input())
+print(len(set(t)))
+
+
