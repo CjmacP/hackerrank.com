@@ -1,0 +1,11 @@
+# https://www.hackerrank.com/challenges/py-set-intersection-operation/problem
+# Difficulty: Easy
+
+input()
+first = set(map(int, input().split()))
+input()
+second = set(map(int, input().split()))
+
+final = first.intersection(second)
+print(len(final))
+
