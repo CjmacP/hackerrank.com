@@ -1,0 +1,16 @@
+# https://www.hackerrank.com/challenges/symmetric-difference/problem
+# Difficulty: Easy
+
+input()
+first = set(map(int, input().split()))
+input()
+second = set(map(int, input().split()))
+
+un1 = first.difference(second)
+un2 = second.difference(first)
+
+final = un1.union(un2)
+
+for i in sorted(final):
+    print(i)
+
