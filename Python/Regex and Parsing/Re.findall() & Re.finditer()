@@ -1,0 +1,41 @@
+# https://www.hackerrank.com/challenges/re-findall-re-finditer/problem
+# Difficulty: Easy
+
+a = str(input())
+p = 1
+kz = 'QWRTYPSDFGHJKLZXCVBNMqwrtypsdfghjklzxcvbnm'
+ie = 'aeiouAEIOU'
+r = []
+q = 0
+ind = []
+n = 0
+for i in a:
+    if i in ie:
+        if a[p] in ie or a[p - 2] in ie:
+            r.append(i)
+            ind.append(p - 1)
+            p += 1
+
+        else:
+            r = []
+            p += 1
+
+    elif len(r) >= 2:
+        if a[ind[0] - 1] in kz and a[ind[-1] + 1] in kz:
+            print(''.join(r))
+            r = []
+            q += 1
+            ind = []
+            p += 1
+
+        else:
+            p += 1
+            r = []
+            ind = []
+    else:
+        p += 1
+        ind = []
+        r = []
+if q == 0:
+    print(-1)
+
