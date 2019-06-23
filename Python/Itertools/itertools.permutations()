@@ -1,0 +1,12 @@
+# https://www.hackerrank.com/challenges/itertools-permutations/problem
+# Difficulty: Easy
+
+from itertools import permutations as per
+
+ins = input().split()
+ins1 = ins[0].upper()
+ender = list(per(ins1, int(ins[-1])))
+
+for i in sorted(ender):
+    print(''.join(map(str, i)))
+    
