@@ -1,0 +1,26 @@
+# https://www.hackerrank.com/challenges/plus-minus/problem
+# Difficulty: Easy
+
+def plusMinus(arr):
+    zero = []
+    pos = []
+    neg = []
+    
+    for i in arr:
+        if i == 0:
+            zero.append(i)
+        elif i > 0:
+            pos.append(i)
+        else:
+            neg.append(i)
+    print(len(pos) / n)
+    print(len(neg) / n)
+    print(len(zero) / n)
+
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    plusMinus(arr)
+
