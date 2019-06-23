@@ -1,0 +1,11 @@
+# https://www.hackerrank.com/challenges/s10-basic-statistics/problem
+
+import statistics as st
+from scipy import stats
+
+input()
+
+lst = list(map(int, input().split(' ')))
+print(st.mean(lst))
+print(st.median(lst))
+print(int(stats.mode(lst)[0]))
