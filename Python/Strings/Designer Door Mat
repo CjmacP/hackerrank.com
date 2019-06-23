@@ -1,0 +1,13 @@
+# https://www.hackerrank.com/challenges/designer-door-mat/problem
+# Difficulty: Easy
+
+n = list(map(int, input().split()))
+c = "WELCOME"
+for i in range(((n[0])//2)):
+    print(('.|.' * ((i * 2) + 1)).center(n[1], '-'))
+
+print(c.center(n[1], '-'))
+
+for i in range(((n[0])//2)):
+    print(('.|.' * ((n[0] - ((i * 2) + 2)))).center(n[1], '-'))
+
