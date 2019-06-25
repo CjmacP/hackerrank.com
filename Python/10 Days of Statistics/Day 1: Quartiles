@@ -1,0 +1,38 @@
+# https://www.hackerrank.com/challenges/s10-quartiles/problem
+
+def quartiles():
+    n = int(input())
+    lst = sorted(list(map(int, input().split())))
+    
+    first = (lst[(n//2//2-1)] + lst[(n//2//2)])//2
+    mid = (lst[(n//2-1)] + lst[(n//2)])//2
+    third = (lst[-(n//2//2)] + lst[-(n//2//2+1)])//2
+    
+    odd_first = lst[(n//2//2)]
+    odd_mid = lst[n//2]
+    odd_third = lst[-(n//2//2+1)]
+    
+    empty = []
+    
+    if n%2:
+        empty.append(odd_mid)
+        if (n//2)%2:
+            empty.append(odd_first)
+            empty.append(odd_third)
+        else:
+            empty.append(first)
+            empty.append(third)  
+    elif not n%2:
+        empty.append(mid)
+        if (n//2)%2:
+            empty.append(odd_first)
+            empty.append(odd_third)
+        else:
+            empty.append(first)
+            empty.append(third) 
+
+    print(empty[1])
+    print(empty[0])
+    print(empty[2])
+quartiles()
+
