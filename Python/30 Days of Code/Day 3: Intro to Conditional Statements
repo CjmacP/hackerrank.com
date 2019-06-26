@@ -1,0 +1,12 @@
+# https://www.hackerrank.com/challenges/30-conditional-statements/problem
+
+def weird_n():
+    n = int(input())
+    
+    if n%2 == 0 and (n in range(2,5) or n > 20):
+        print('Not Weird')
+    else:
+        print('Weird')
+        
+    
+weird_n()
