@@ -1,0 +1,54 @@
+# https://www.hackerrank.com/challenges/s10-interquartile-range/problem
+
+def inter_q():
+    n = int(input())
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+    final_lst = []
+    for i,p in enumerate(b):
+        for _ in range(p):
+            final_lst.append(a[i])
+        
+
+    return quartiles(final_lst)
+
+def quartiles(lstx):
+    
+    n = len(lstx)
+    lst = sorted(lstx)
+    
+    first = (lst[(n//2//2-1)] + lst[(n//2//2)])//2
+    mid = (lst[(n//2-1)] + lst[(n//2)])//2
+    third = (lst[-(n//2//2)] + lst[-(n//2//2+1)])//2
+    
+    odd_first = lst[(n//2//2)]
+    odd_mid = lst[n//2]
+    odd_third = lst[-(n//2//2+1)]
+    
+    empty = []
+    
+    if n%2:
+        empty.append(odd_mid)
+        if (n//2)%2:
+            empty.append(odd_first)
+            empty.append(odd_third)
+        else:
+            empty.append(first)
+            empty.append(third)  
+    elif not n%2:
+        empty.append(mid)
+        if (n//2)%2:
+            empty.append(odd_first)
+            empty.append(odd_third)
+        else:
+            empty.append(first)
+            empty.append(third) 
+
+    #print(empty[1])
+    #print(empty[0])
+    #print(empty[2])
+    print(abs(empty[1] - empty[2])/1)
+    
+# quartiles()
+inter_q()
+
