@@ -1,0 +1,9 @@
+# https://www.hackerrank.com/challenges/s10-standard-deviation/problem
+
+n = int(input())
+lst = list(map(int, input().split()))
+
+mean_lst = sum(lst) / n
+
+print(round((sum([(i - mean_lst)**2 for i in lst]) / n)**(1/2), 1))
+
