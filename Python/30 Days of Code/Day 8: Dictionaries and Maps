@@ -1,0 +1,15 @@
+# https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem
+
+n = int(input())
+phone_num = {}
+for i in range(n):
+    phone = input().split()
+    phone_num[phone[0]] = int(phone[1])
+lookup = []
+while True:
+    lookup.append(input())
+    if '' in lookup:
+        lookup.pop()
+        break    
+print('\n'.join([f'{i}={phone_num[i]}' if i in phone_num else 'Not found' for i in lookup]))
+
