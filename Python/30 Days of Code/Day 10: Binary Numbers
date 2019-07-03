@@ -1,0 +1,32 @@
+# https://www.hackerrank.com/challenges/30-binary-numbers/problem
+
+# I wanted to test three different ways to find most efficient method 
+
+import time
+
+num = input()
+
+start = time.time()
+print(sorted([len(i)for i in bin(int(num))[2:].split('0')])[-1])
+end = time.time()
+time_taken = end - start
+print('-A- Time: ',time_taken)
+
+
+start = time.time()
+print(sorted(list(map(len,'{0:b}'.format(int(num.strip())).split("0"))),reverse=True)[0])
+end = time.time()
+time_taken = end - start
+print('-B- Time: ',time_taken)
+
+
+start = time.time()
+print(max([len(i)for i in bin(int(num))[2:].split('0')]))
+end = time.time()
+time_taken = end - start
+print('-C- Time: ',time_taken)
+
+'''
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950
+9
+'''
