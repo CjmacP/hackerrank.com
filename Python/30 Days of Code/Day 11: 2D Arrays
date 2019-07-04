@@ -1,0 +1,22 @@
+# https://www.hackerrank.com/challenges/30-2d-arrays/problem
+
+arr = []
+
+for _ in range(6):
+    arr.append(list(map(int, input().rstrip().split())))
+
+arr2 = []
+
+for j in range(6):
+    
+    if j+3 <=6:
+        top = [sum(arr[j][i:i+3]) for i in range(6) if i+3 <= 6]
+        middle = [arr[j+1][i] for i in range(1,6) if i+1 < 6]
+        bottom = [sum(arr[j+2][i:i+3]) for i in range(6) if i+3 <= 6]
+        
+        for p in range(4):
+            arr2.append(top[p]+middle[p]+bottom[p])
+        
+print(max(arr2))
+
+
