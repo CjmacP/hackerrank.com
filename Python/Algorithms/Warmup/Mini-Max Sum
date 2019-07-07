@@ -1,0 +1,11 @@
+# https://www.hackerrank.com/challenges/mini-max-sum/problem
+Difficulty: Easy
+
+def miniMaxSum(arr):
+    srt_arr = sorted(arr)
+    print(sum(srt_arr[:-1]), sum(srt_arr[1:]))
+if __name__ == '__main__':
+    arr = list(map(int, input().rstrip().split()))
+
+    miniMaxSum(arr)
+
